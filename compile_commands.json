@@ -1,0 +1,62 @@
+[
+    {
+        "file":"src/main.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"src/main.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"src/ofApp.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"src/ofApp.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxBaseGui.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxBaseGui.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxButton.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxButton.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxColorPicker.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxColorPicker.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxGuiGroup.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxGuiGroup.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxInputField.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxInputField.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxLabel.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxLabel.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxPanel.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxPanel.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxSlider.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxSlider.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxSliderGroup.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxSliderGroup.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    },
+    {
+        "file":"../../../addons/ofxGui/src/ofxToggle.cpp",
+        "command":"ClCompile -I\"../../../addons/ofxGui/src\" \"../../../addons/ofxGui/src/ofxToggle.cpp\"",
+        "directory":"C:/Users/kerde/OneDrive/Documents/of_v0.12.0_vs_release/apps/myApps/CellPlayground"
+    }
+]
