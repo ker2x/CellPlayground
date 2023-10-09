@@ -4,36 +4,40 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+	// in case of reset, clear the vectors and reset the index
 	index = 0;
-
 	cells.clear();
 	lines.clear();
+
+	ofBackground(0, 0, 0);
+
+	// provide a tiny performance boost by caching the height and width
 	const auto height = ofGetHeight();
 	const auto width = ofGetWidth();
 
-	// create cells with random positions and colors
-	for (auto i = 0; i < 2000; i++) {
+	// create cells with random positions and colors and push them into the cells vector
+	// add some padding to the width and height to prevent cells from being drawn on the edge
+	for (auto i = 0; i < numCells; i++) {
 		Cell cell;
-		cell.position.x = ofRandom(0, width);
-		cell.position.y = ofRandom(0, height);
-		cell.color = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
+		cell.position.x = ofRandom(10, width - 10);
+		cell.position.y = ofRandom(10, height - 10);
+		cell.color = ofColor(ofRandom(50, 255), ofRandom(50, 255), ofRandom(50, 255));
 		cells.push_back(cell);
 	}
-
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 
-	const auto height = ofGetHeight();
-	const auto width = ofGetWidth();
+	//const auto height = ofGetHeight();
+	//const auto width = ofGetWidth();
 
 	// loop through all the cells and compare them to each other to see if they are close enough to change color
 	// effectively, this creates a "neighborhood" of cells that are close to each other
 	for (auto& cell : cells) {
 		if (&cells[index] != &cell) {
 			float distance = ofDist(cell.position.x, cell.position.y, cells[index].position.x, cells[index].position.y);
-			if (distance < 100) {
+			if (distance < distanceThreshold) {
 				cell.color = cells[index].color;
 				Line l;
 				l.line = ofVec4f(cell.position.x, cell.position.y, cells[index].position.x, cells[index].position.y);
@@ -52,9 +56,6 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
 
-	// Clear the screen with a black color
-	ofBackground(0, 0, 0);
-
 	// draw the lines
 	for (auto& line : lines) {
 		ofSetColor(line.color, 50);
@@ -64,12 +65,12 @@ void ofApp::draw(){
 	// draw the cells
 	for (auto& cell : cells) {
 		ofSetColor(cell.color);
-		ofDrawCircle(cell.position.x, cell.position.y, 7);
+		ofDrawCircle(cell.position.x, cell.position.y, distanceThreshold / 20);
 	}
 	
 	// redraw the cell at the current index with a transparent color and a larger radius
-	ofSetColor(cells[index].color, 127);
-	ofDrawCircle(cells[index].position.x, cells[index].position.y, 100);
+	ofSetColor(cells[index].color, 150);
+	ofDrawCircle(cells[index].position.x, cells[index].position.y, distanceThreshold);
 }
 
 //--------------------------------------------------------------
@@ -79,12 +80,6 @@ void ofApp::keyPressed(int key){
 	if (key == ofKey::OF_KEY_BACKSPACE) {
 		setup();
 	}
-	
-	
-	if (index < cells.size()) {
-		index++;
-	}
-	
 }
 
 //--------------------------------------------------------------

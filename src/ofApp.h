@@ -24,9 +24,11 @@ public:
 
 private:
 
+	const float distanceThreshold = 50;
+	const int numCells = 4000;
+
 	struct Cell {
 		ofVec2f position;
-		ofVec2f velocity;
 		ofColor color;
 	};
 	vector<Cell> cells;
